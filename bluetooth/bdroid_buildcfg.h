@@ -28,5 +28,6 @@
 #define MAX_L2CAP_CHANNELS    14
 // skips conn update at conn completion
 #define BTA_BLE_SKIP_CONN_UPD  TRUE
+#define BLE_VND_INCLUDED FALSE
 
 #endif
