@@ -13,18 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from amami device
-$(call inherit-product, device/sony/amami/amami.mk)
+# Inherit from togari device
+$(call inherit-product, device/sony/togari/togari.mk)
 
 # Set those variables here to overwrite the inherited values.
-#PRODUCT_NAME := full_amami
-#PRODUCT_DEVICE := amami
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := Xperia Z1 Compact
+PRODUCT_MODEL := Xperia Z Ultra

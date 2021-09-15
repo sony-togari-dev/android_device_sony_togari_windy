@@ -15,26 +15,23 @@
 # inherit from the common rhine definitions
 include device/sony/rhine-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
-#-include vendor/sony/amami/BoardConfigVendor.mk
-
 # Assert
-TARGET_OTA_ASSERT_DEVICE := D5503,amami,anami
+TARGET_OTA_ASSERT_DEVICE := C6802,C6806,C6833,C6843,togari
 
-TARGET_SPECIFIC_HEADER_PATH += device/sony/amami/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/togari/include
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/amami/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/togari/bluetooth
 
 # Kernel properties
-TARGET_KERNEL_CONFIG := lineageos_rhine_amami_row_defconfig
+TARGET_KERNEL_CONFIG := lineageos_rhine_togari_row_defconfig
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 26
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01400000
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x01400000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2436890624
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12891175936
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1056964608
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 
 #Recovery

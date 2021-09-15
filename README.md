@@ -1,2 +1,2 @@
-android_device_sony_amami
+android_device_sony_togari
 ==========================

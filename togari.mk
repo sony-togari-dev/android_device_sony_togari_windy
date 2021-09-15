@@ -15,7 +15,7 @@
 # Inherit the fusion-common definitions
 $(call inherit-product, device/sony/rhine-common/rhine.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/amami/overlay
+DEVICE_PACKAGE_OVERLAYS += device/sony/togari/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 # we do this little trick to fall back to the hdpi version
 # if the xhdpi doesn't exist.
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Device specific init
 PRODUCT_COPY_FILES += \
@@ -47,10 +47,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/thermanager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/thermanager.xml
 
-TARGET_SYSTEM_PROP += device/sony/amami/system.prop
+TARGET_SYSTEM_PROP += device/sony/togari/system.prop
 
 # setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Include non-opensource parts
-$(call inherit-product, vendor/sony/amami/amami-vendor.mk)
+$(call inherit-product, vendor/sony/togari/togari-vendor.mk)
