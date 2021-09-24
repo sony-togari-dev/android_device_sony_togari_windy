@@ -39,3 +39,6 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/max1187x/wakeup_gesture"
 
 #Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+
+# Security Patch Level
+VENDOR_SECURITY_PATCH := 2015-11-01
