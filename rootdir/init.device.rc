@@ -22,3 +22,7 @@ on boot
 
     # Torch
     chmod 0666 /sys/class/misc/pm8941-flash/device/mode
+
+on property:dev.bootcomplete=1
+    # Flash touchscreen firmware
+    write /sys/devices/virtual/input/max1187x/fw_update "default"
