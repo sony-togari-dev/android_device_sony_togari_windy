@@ -16,14 +16,14 @@
 include device/sony/rhine-common/BoardConfigCommon.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := C6802,C6806,C6833,C6843,togari
+TARGET_OTA_ASSERT_DEVICE := SGP412,togari_windy
 
-TARGET_SPECIFIC_HEADER_PATH += device/sony/togari/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/togari_windy/include
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/togari/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/togari_windy/bluetooth
 
 # Kernel properties
-TARGET_KERNEL_CONFIG := lineageos_rhine_togari_row_defconfig
+TARGET_KERNEL_CONFIG := lineageos_rhine_togari_windy_defconfig
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 26
@@ -39,6 +39,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/max1187x/wakeup_gesture"
 
 #Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+
+# WiFi only
+BOARD_HAVE_RADIO := false
 
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2015-11-01
